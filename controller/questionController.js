@@ -178,7 +178,7 @@ async function oldestQuestions(req, res) {
         q.created_at,
         q.tag,
         q.likes,
-        q.dislike AS disLikes,
+        q.dislikes AS disLikes,
         r.username AS user_name,
         IFNULL(r.username, 'Unknown User') AS user_name
       FROM 
@@ -226,7 +226,7 @@ async function likedQuestions(req, res) {
         q.created_at,
         q.tag,
         q.likes,
-        q.dislike AS disLikes,
+        q.dislikes AS disLikes,
         r.username AS user_name,
         IFNULL(r.username, 'Unknown User') AS user_name
       FROM 
